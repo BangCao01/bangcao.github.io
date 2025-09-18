@@ -1,5 +1,302 @@
-helllo bangcao 
-<img src="./bg.png"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>September 2025</title>
+    <!-- <link rel="stylesheet" href="css/mystyle.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" >
+    <style>
+        html {
+        height: 100%;
+        }
+        body{
+            margin: 0px;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-end;
+            /* align-items: center; */
+            gap: 10px 20px;
+            height: 100%;
+            
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            background-color: rgb(255, 254, 254);
+            gap: 30px;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+
+        .box{
+            /* width: 50px;
+            height: 50px; */
+            background-color: rgb(253, 253, 254);
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap:10px;
+
+        }
+        .headerBox{
+            /* width: 50px; */
+            height: 50px;
+            /* background-color: rgb(246, 245, 248); */
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            /* align-items: center; */
+            
+
+        }
+        .inputBox{
+            width: 50px;
+            height:30px;
+            background-color: rgb(253, 253, 254);
+        }
+        .inputBox img{
+            width: 30px;
+            height:30px;
+        }
+        #search_input{
+            width: 300px;
+        }
+        #search_input input{
+           background-color: rgb(219, 221, 221);
+           width: 100%;
+           height: 100%;
+        }
+        .midle_button button{
+            background-color: #F8F9FA;
+            /* margin-left: 50px; */
+            border-radius: 10px;
+            border: solid 1px;
+            height: 40px;
+            width:150px;
+            /* border-color: rgb(72, 72, 73); */
+        }
+
+        .midle_button button:hover{
+            background-color: #d90436;
+        }
 
 
-My test website.
+        #box_input{
+            border: 1px solid #333;
+            border-radius: 45px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            
+        }
+        #account_name{
+            border-radius: 45px;
+            background-color: rgb(131, 130, 132);
+
+        }
+        .headerBox p{
+            margin: auto;
+        }
+
+        footer {
+            background-color: aqua;
+        }
+        
+        .footerBox{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .footer_top{
+            background-color: rgb(223, 222, 225);
+        } 
+        .footer_bottom{
+            background-color: rgb(223, 222, 225);
+             display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+        }
+
+        .footerBottomBox nav a{
+            text-decoration: none;
+            color: #000;
+
+        }
+        .footer_top{
+            border-bottom: #aca9a9 solid 1px;
+            height: 40px;
+            
+        }
+
+        .footer_top p{
+            /* text-align: center; */
+            margin-left: 30px;
+        }
+
+        .footer_bottom{
+           
+            height: 40px;
+        }
+        .footer_bottom_left{
+           
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+         .footer_bottom_left nav a{
+           
+            margin-right: 50px;
+        }
+        .footer_bottom_right{
+           
+            margin-right: 30px;
+            margin-top: 10px;
+        }
+        .footer_bottom_right nav a {
+           
+             margin-left: 50px;
+        }
+
+        .footer_bottom nav a:hover {
+           
+             border-top: #d90436 3px solid;
+        }
+         .headerBox:hover {
+           
+             border-bottom: #d90436 3px solid;
+        }
+
+        main .main_page{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+       
+
+    
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+       $(document).ready(function(){
+            $(".main_page").hide();
+            $("#Projects").show();
+            var selectedPage=null;
+
+            $(".headerBox").click(function(){
+                $(".main_page").hide();
+                
+                var option = $(this).text();
+                if(option == "Projects")
+                {
+                selectedPage = $("#Projects");
+                $("#Projects").show();
+                
+                }else if(option == "Educations")
+                {
+                
+                $("#Educations").show();
+                
+            
+                }
+
+                $(".headerBox").css("background-color", "white");
+                $(".headerBox").css("border-bottom", "0px solid red");
+                $(this).css("background-color", "lightgray");
+                $(this).css("border-bottom", "3px solid red");
+            });
+
+           
+});
+    </script>
+</head>
+<body>
+ 
+  <header>
+  <div class="headerBox"><p>Projects</p></div>
+  <div class="headerBox"><p>Educations</p></div>
+  <div class="headerBox"><img src="./images/app-drawer.png"></div>
+  <div class="headerBox" id="account_name"><p>Info</p></div>
+
+  </header>
+  <main>
+    <div class="main_page" id="Projects">
+    <div class="box"><img src="./images/google.png"></div>
+    <div class="box" id="box_input">
+        <div id="search_icon" class="inputBox"><img src="./images/magnifying-glass.png"></div>
+        <div id="search_input" class="inputBox"><input> </div>
+        <div id="mic_icon" class="inputBox"><img src="./images/microphone.png"></div>
+        <div id="camera_icon" class="inputBox"><img src="./images/camera.png"></div>
+        
+
+
+    </div>
+    <div class="box">
+        <div id="google_search_text" class="midle_button"><button>Google Search </button> </div>
+        <div id="feeling_text" class="midle_button"><button>I'm feeling lucky </button></div>
+    </div>
+    <div class="box"><p>Google offered in: <a href="#">suomi</a>, <a href="#">svenska</a>  </p></div>
+    
+    </div>
+    <div class="main_page" id="Educations">
+         <div>Education content</div>
+         <div class="box">
+        <div id="google_search_text" class="midle_button"><button>Google Search </button> </div>
+        <div id="feeling_text" class="midle_button"><button>I'm feeling lucky </button></div>
+        </div>
+        <div class="box"><p>Google offered in: <a href="#">suomi</a>, <a href="#">svenska</a>  </p></div>
+    </div>
+  </main>
+  <footer>
+
+    <div class="footerBox">
+        
+        <div class="footer_bottom">
+            <div class="footer_bottom_left footerBottomBox">
+                <nav>
+                <a href="#"> About</a>
+                <a href="#"> Advertising</a>
+                <a href="#"> Business</a>
+                <a href="#"> How Search works</a>
+                </nav>
+                
+            </div>
+            <div class="footer_bottom_right footerBottomBox">
+               <nav>
+                <a href="#"> Privacy</a>
+                <a href="#"> Terms</a>
+                <a href="#"> Settings</a>
+                
+                </nav>
+            </div>
+            
+
+            </div>
+        
+
+    </div>
+
+
+
+  </footer>
+
+</body>
+</html>
