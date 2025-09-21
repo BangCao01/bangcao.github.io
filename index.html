@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" >
     <style>
-        html {
+        /* html {
         height: 100%;
-        }
+        } */
         body{
             margin: 0px;
             font-family: 'Courier New', Courier, monospace;
@@ -18,6 +18,9 @@
             /* align-items: center; */
             gap: 10px 20px;
             height: 100%;
+            background-color: #020F20;
+            background-image: url('./images/background.jpg');
+            background-repeat: repeat-x;
             
         }
         header{
@@ -26,6 +29,12 @@
             justify-content: flex-end;
             background-color: rgb(255, 254, 254);
             gap: 30px;
+            position: fixed;
+            top:0px;
+            width:100%;
+            
+            
+  
         }
 
         main{
@@ -36,19 +45,52 @@
             gap: 30px;
             width: 100%;
             height: 100%;
-            background-color: white;
+            
+            /* background-color: white; */
         }
 
-        .box{
-            /* width: 50px;
-            height: 50px; */
-            background-color: rgb(253, 253, 254);
+        .contentBox{
+            /* width: 50px;*/
+            height: 700px; 
+            background-image: url("./images/alpha.png");
+            margin-left: 30px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+        .contentBox .paragraph{
+            margin: 50px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid #DDEDFA;
+        }
+
+         .content_box_item {
+            align-items: center;
+            margin: auto;
+         }
+         .content_box_item .imagesBox{
+            
             display: flex;
             flex-direction: row;
-            justify-content: flex-start;
-            gap:10px;
+            justify-content: center;
+         }
+         .content_box_item .imagesBox img{
+            margin-top: 5px;
+            margin-left: 5px;
+         }
 
+         .contentBox .paragraph_cloud{
+            margin: 50px;
+            padding: 20px;
+            color: #022A6A;
+            
         }
+
         .headerBox{
             /* width: 50px; */
             height: 50px;
@@ -60,58 +102,27 @@
             
 
         }
-        .inputBox{
-            width: 50px;
-            height:30px;
-            background-color: rgb(253, 253, 254);
-        }
-        .inputBox img{
-            width: 30px;
-            height:30px;
-        }
-        #search_input{
-            width: 300px;
-        }
-        #search_input input{
-           background-color: rgb(219, 221, 221);
-           width: 100%;
-           height: 100%;
-        }
-        .midle_button button{
-            background-color: #F8F9FA;
-            /* margin-left: 50px; */
-            border-radius: 10px;
-            border: solid 1px;
-            height: 40px;
-            width:150px;
-            /* border-color: rgb(72, 72, 73); */
-        }
-
-        .midle_button button:hover{
-            background-color: #d90436;
-        }
+      
+      
 
 
-        #box_input{
-            border: 1px solid #333;
-            border-radius: 45px;
-            padding-bottom: 20px;
-            padding-top: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            
-        }
-        #account_name{
-            border-radius: 45px;
-            background-color: rgb(131, 130, 132);
-
-        }
         .headerBox p{
             margin: auto;
+        }
+        .headerBox a{
+           
+            text-decoration: none;
+        }
+        #navExperiences{
+            margin-right: 30px;
         }
 
         footer {
             background-color: aqua;
+            position: fixed;
+            bottom:0px;
+            width:100%;
+            height: 50px;
         }
         
         .footerBox{
@@ -119,11 +130,9 @@
             flex-direction: column;
 
         }
-        .footer_top{
-            background-color: rgb(223, 222, 225);
-        } 
+       
         .footer_bottom{
-            background-color: rgb(223, 222, 225);
+            background-color: #e0dee1;
              display: flex;
             flex-direction: row;
             justify-content:space-between;
@@ -134,50 +143,64 @@
             color: #000;
 
         }
-        .footer_top{
-            border-bottom: #aca9a9 solid 1px;
-            height: 40px;
-            
-        }
-
-        .footer_top p{
-            /* text-align: center; */
-            margin-left: 30px;
-        }
+       
 
         .footer_bottom{
            
-            height: 40px;
+            height: 50px;
         }
         .footer_bottom_left{
            
             margin-left: 30px;
             margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            
         }
-         .footer_bottom_left nav a{
+         .footer_bottom_left .footerBoxItem{
            
             margin-right: 50px;
+            padding-top: 5px;
+            height: 50px;
+        }
+        .footer_bottom_left .footerBoxItem a{
+           
+            text-decoration: none;
         }
         .footer_bottom_right{
            
             margin-right: 30px;
             margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
         }
-        .footer_bottom_right nav a {
+        .footer_bottom_right .footerBoxItem{
            
              margin-left: 50px;
+             padding-top: 5px;
+             height: 50px;
+        }
+        .footer_bottom_right .footerBoxItem a{
+           
+            text-decoration: none;
+            
         }
 
-        .footer_bottom nav a:hover {
+        .footerBottomBox .footerBoxItem:hover {
            
-             border-top: #d90436 3px solid;
+             border-top: #022A6A 3px solid;
         }
          .headerBox:hover {
            
-             border-bottom: #d90436 3px solid;
+             border-bottom: #022A6A 3px solid;
         }
 
         main .main_page{
+            
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -185,9 +208,115 @@
             gap: 30px;
             width: 100%;
             height: 100%;
-            background-color: white;
+            margin-top: 0px;
+            
+            /* background-color: white; */
+            
+        }
+        #Projects{
+            min-height: 700px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start; 
+            /* align-items:start;*/
+            gap:10px;
+            padding-top: 50px;
+            
+        }
+                /* Responsive layout - makes a one column-layout instead of two-column layout */
+        @media (max-width: 800px) {
+            #Projects {
+                flex-direction: column;
+            }
+            .Experiences_content{
+                flex-direction: column;
+            }
         }
        
+        #Educations{
+            min-height: 700px;
+            width: 100%;
+            background-color: #DDEDFA;
+        }
+        #Skills {
+            min-height: 700px;
+            width: 100%;
+            background-color: #D9EAD3;
+            /* background-image: url('./images/background.jpg'); */
+        }
+
+        #Contact {
+            
+            width: 100%;
+            background-color: #ec03c9;
+        }
+        #Blogs {
+            height: 700px;
+            width: 100%;
+            background-color: #9692de;
+        }
+        #Experiences {
+            
+            width: 100%;
+            background-color: #92cec1;
+        }
+        
+        .rightColumn{
+            margin-right: 30px;
+            flex:80%;
+        }
+        .leftColumn{
+            margin-right: 30px;
+            flex: 20%;
+            width: 100%;
+        }
+       
+
+        .imageItem{
+            max-width: 100px;
+            max-height: 100px;
+        }
+        .education_pargraph
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .education_paragraph_box
+        {
+            margin-left: 20px;
+        }
+        .education_paragraph_text
+        {
+            margin-right: 20px;
+        }
+        .education_paragraph_text h2
+        {
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+
+        .Experiences_content{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            /* background-color: #9692de; */
+            /* justify-content: center; */
+        }
+        .Experiences_column{
+            /* width: 30%; */
+            flex: 30%;
+            margin: 10px;
+            min-height: 700px;
+            /* background-color: #4a4598; */
+        }
+         @media (max-width: 800px) {
+            .Experiences_content{
+                flex-direction: column;
+            }
+           
+        }
 
     
 
@@ -197,11 +326,12 @@
     <script>
 
        $(document).ready(function(){
-            $(".main_page").hide();
+            //$(".main_page").hide();
             $("#Projects").show();
             var selectedPage=null;
 
             $(".headerBox").click(function(){
+                /*
                 $(".main_page").hide();
                 
                 var option = $(this).text();
@@ -217,12 +347,27 @@
                 
             
                 }
+                */
 
                 $(".headerBox").css("background-color", "white");
-                $(".headerBox").css("border-bottom", "0px solid red");
+                $(".headerBox").css("border-bottom", "0px solid #022A6A");
+                $(".footerBoxItem").css("background-color", "#e0dee1");
+                $(".footerBoxItem").css("border-top", "0px solid #022A6A");
                 $(this).css("background-color", "lightgray");
-                $(this).css("border-bottom", "3px solid red");
+                $(this).css("border-bottom", "3px solid #022A6A");
             });
+
+             $(".footerBoxItem").click(function(){
+             
+                $(".headerBox").css("background-color", "white");
+                $(".headerBox").css("border-bottom", "0px solid #022A6A");
+                $(".footerBoxItem").css("background-color", "#e0dee1");
+                $(".footerBoxItem").css("border-top", "0px solid #022A6A");
+                $(this).css("background-color", "lightgray");
+                $(this).css("border-top", "3px solid #022A6A");
+            });
+
+
 
            
 });
@@ -231,39 +376,416 @@
 <body>
  
   <header>
-  <div class="headerBox"><p>Projects</p></div>
-  <div class="headerBox"><p>Educations</p></div>
-  <div class="headerBox"><img src="./images/app-drawer.png"></div>
-  <div class="headerBox" id="account_name"><p>Info</p></div>
+  <div class="headerBox"><p><a href="#Projects">Introduction</a></p></div>
+  <div class="headerBox"><p><a href="#Educations">Educations</a></p></div>
+  <div class="headerBox"><p><a href="#Skills">Skills</a></p></div>
+  <div class="headerBox" id="navExperiences"><p><a href="#Experiences" > Experiences</a> </p></div>
+  
 
   </header>
   <main>
     <div class="main_page" id="Projects">
-    <div class="box"><img src="./images/google.png"></div>
-    <div class="box" id="box_input">
-        <div id="search_icon" class="inputBox"><img src="./images/magnifying-glass.png"></div>
-        <div id="search_input" class="inputBox"><input> </div>
-        <div id="mic_icon" class="inputBox"><img src="./images/microphone.png"></div>
-        <div id="camera_icon" class="inputBox"><img src="./images/camera.png"></div>
+    <div class="contentBox leftColumn" >
+        <img src="./images/bangcao.png" width="215" height="249" id="Avatar">
+        <p><b>Senior Software Engineer</b></p>
+        <hr>
+        <blockquote> "I love coding. now for almost over 20 years from the first lesson at technology univeristy, I still love it."</blockquote>
+       
         
+    </div>
+    <div class="contentBox rightColumn">
+        <div class="content_box_item">
+            <p class="paragraph">A software engineer with over 16 years in the software development industry. With a mindset eager to learn new technologies, skills and team work spirit, I drove my teams to new heights. Always inspire my team members to explore their potential and grow them up.
+            </p>
+        </div>
+        <div class="content_box_item">
+            <div class="imagesBox">
+                <img src="/images/Ubisoft.png" class="imageItem">
+                <img src="/images/geovn.png" class="imageItem">
+                <img src="/images/gmorunsystem.jpg" class="imageItem">
+                <img src="/images/gameloft.png" class="imageItem">
 
+            </div>
+    
+            <div class="imagesBox">
+                <img src="/images/novia.png" class="imageItem">
+                <img src="/images/bk.png" class="imageItem">
+            
+            </div>
+        </div>
+        <div class="content_box_item">
+        
+        <p class="paragraph_cloud">Object Oriented Programming
+            Programming Languages: <b>C/C++, C# </b>, Java, <b>Javascript</b>, Typescript.
+            Software Development Process: <b>Agile/Scrum/Kanban</b>.
+            Source code control: <b>GIT</b>, SVN, 
+            IDE: Eclipse, Android Studio, <b>Unity 3D</b>, Visual studio code.
+            Good at Math.
+            Quick learning 
+            Good teamwork
+            2D, <b>3D graphics</b>, OpenGL, WebGL
+            Mobile OS (Android, iOs).
+            Database: <b>MySQL, MongoDB, PostgreSQL, SQLite.</b>
+            Server: Tomcat, Apache, Jetty..
+            Cloud tool: <b>Google Cloud Console</b>, AWS.
+            Framework: Unity, Cocos2dx, ReactJs, PixiJs, <b>ThreeJs</b>, Cocos Creator. <b>ExpressJS</b>. Java Spring Boot.
+            Package tool:  Maven, Yarn…,
+            Frontend: HTML/HTML5, CSS, Javascript, <b>ReactJs</b>, Material UI.
+            Backend: <b>Restful API </b>
+
+        </p>
+        </div>
 
     </div>
-    <div class="box">
-        <div id="google_search_text" class="midle_button"><button>Google Search </button> </div>
-        <div id="feeling_text" class="midle_button"><button>I'm feeling lucky </button></div>
-    </div>
-    <div class="box"><p>Google offered in: <a href="#">suomi</a>, <a href="#">svenska</a>  </p></div>
     
     </div>
+    
     <div class="main_page" id="Educations">
-         <div>Education content</div>
+         <div><h1>EDUCATION</h1></div>
          <div class="box">
-        <div id="google_search_text" class="midle_button"><button>Google Search </button> </div>
-        <div id="feeling_text" class="midle_button"><button>I'm feeling lucky </button></div>
+            <div class="education_pargraph">
+                <div class="education_paragraph_box">
+                    <div class="imagesBox">
+                        <img src="/images/novia.png" class="imageItem">
+                    
+                    </div>
+                </div>
+                <div class="education_paragraph_box">
+                <div class="education_paragraph_text">
+                <h2>NOVIA UNIVERSITY  OF APPLIED SCIENCES</h2>
+                <p>2025 - 2027: Degree program Bachelor of Information Technology.</p>
+                <i>website: <a>https://www.novia.fi/</a></i>
+                </div>
+                </div>
+            </div>
+
+        <div class="education_pargraph">
+            <div class="education_paragraph_box">
+                    <div class="imagesBox">
+                        <img src="/images/bk.png" class="imageItem">
+                    
+                    </div>
+            </div>
+            <div class="education_paragraph_box">
+                <div class="education_paragraph_text">
+                <h2>HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY</h2>
+                <p>2003 - 2008: Studied in the major of software development in the faculty of information technology.</p>
+                <i>website:<a> https://hcmut.edu.vn/en </a></i>
+                </div>
+            </div>
+            
+         </div>
         </div>
-        <div class="box"><p>Google offered in: <a href="#">suomi</a>, <a href="#">svenska</a>  </p></div>
+        <div class="box"><p>************************************* </p></div>
+        
     </div>
+    <div class="main_page" id="Skills">
+         <div><h2>Skills</h2></div>
+         <div class="box">
+            <ul>
+                <li><b>Expertise includes:</b></li>
+                <li>Object Oriented Programming</li>
+                <li>Programming Languages: C/C++, C#, Java, Javascript, Typescript.</li>
+                <li>Software Development Process: Agile/Scrum/Kanban.</li>
+                <li>Source code control: GIT, SVN, </li>
+                <li>IDE: Eclipse, Android Studio, Unity 3D, Visual studio code.</li>
+                <li>Quick learning </li>
+                <li>Good teamwork</li>
+                <li>2D, 3D graphics, OpenGL, WebGL</li>
+                <li>Mobile OS (Android, iOs).</li>
+                <li>Database: MySQL, MongoDB, PostgreSQL, SQLite.</li>
+                <li>Server: Tomcat, Apache, Jetty..</li>
+                <li>Cloud tool: Google Cloud Console, AWS.</li>
+                <li>Framework: Unity, Cocos2dx, ReactJs, PixiJs, ThreeJs, Cocos Creator. ExpressJS. Java Spring Boot.</li>
+                <li>Package tool:  Maven, Yarn…,</li>
+                <li>Frontend: HTML/HTML5, CSS, Javascript, ReactJs, Material UI.</li>
+                <li>Backend: Restful API development.</li>
+                <li>Management: Project manager, team lead, project lead, technical lead.</li>
+                <li>Testing: create test case documents for Unit test, Integration Test, System test. </li>
+
+
+
+
+                <li><b>Languages:</b></li>
+                <li>Vietnamese..</li>
+                <li>English, Ielts 6.0.</li>
+                <li>Japanese, N4.</li>
+                <li>Finnish, beginner level.</li>
+            </ul>
+        </div>
+        <div class="box"><p>************************************* </p></div>
+    </div>
+    <div class="main_page" id="Experiences">
+        <div><h2>Experiences</h2></div>
+        <div class="Experiences_content">
+                <div class="Experiences_column">
+                            <h2><b>UBISOFT.</b></h2>
+                        <h4>6/2024–12/2024</h4>
+                        <h3><b>TITLE:</b> Technical Leader.</h3>
+                        <h4><b>PROJECT LIST:</b></h4>
+                        <p>
+                        Lead a group of 8 developers to focus on “RABID CRAZE CARE”- a 3D “free to play” game.
+                        Tech stack includes.
+                        3D.
+                        AI/Web3
+                        Unity3D, C#.
+                        AWS/.Net/Orleans Framework/MongoDB for server side.
+                        </p>
+                        <h2><b>FREELANCER. </b></h2>
+
+                        <h4>4/2022–present</h4>
+                        <h3><b>TITLE:</b> Graphic and engine game developer.</h3>
+                        <h4><b>PROJECT LIST:</b></h4>
+                        <P>
+                        <b>BENFRAME</b>
+                        A framework based on ThreeJS, and React JS to help develop web-game faster. It saves about 50% time in comparison to other web-game engines. I built this framework from A to Z.
+                        The tool was developed to build a framework for HTML5 game.
+
+                        <a href="https://www.youtube.com/watch?v=QV-o30AY__4&t=375s">https://www.youtube.com/watch?v=QV-o30AY__4&t=375s</a>
+                        <a href="https://www.youtube.com/watch?v=QR10joPShe8">https://www.youtube.com/watch?v=QR10joPShe8</a>
+                        </P>
+                        <p>
+                        <b>World Tour Poker </b>( Freelance, a5labs.co - US base company) - <a href="https://a5labs.co/">https://a5labs.co/ </a>
+                        an online poker game, with Cocos Creator, Typescript for client, Java for server-side script. The product targets the LATAM market, with the tech force from global ( US, Germany, Ukraine , India .., and Vietnam).
+                        </p>
+                        <h2><b>VEGA </b></h2>
+                        <h4>3/2010–11/2010</h4>
+                        <h3><b>TITLE:</b> Mobile application developer</h3>
+                        <h4><b>PROJECT LIST:</b></h4>
+
+                        <ul>
+                        <li>Ola, j2me.</li>
+                        <li>Mobitv, j2me, iphone, symbian QT.</li>
+                        <li>Game engine and gamemaker, Java.</li>
+                        
+                        </ul>
+
+                        <h2><b>SUMOGAME  </b></h2>
+                        <h4>7/2013–7/2017</h4>
+                        <h3><b>TITLE:</b> CTO</h3>
+                        <h4><b>PROJECT LIST:</b></h4>
+
+                        <p>
+                            <b>Bubble Shooter</b>(outsourcing), Unity 3D, C#. More than 150 levels ensure the game 
+                            gets the best performance ( CPU :20%, FPS:59, GPU, 68%). 
+                            <a>https://play.google.com/store/apps/details?id=com.vgstudio.bubbleshooter.bubblejourney</a>
+
+
+                        </p>
+                        <p><b>Traffic Racing Escape</b>, racing game, Unity 3D, C#.            
+                        https://play.google.com/store/apps/details?id=com.smgame.trafficracingescape.v1
+                        </p> 
+                        <p><b>Jewel Egg</b>  </p>
+                        <p><b>Bubble King</b>  </p>
+                        <p><b>Tetris Classic</b>
+                        </p>
+                        <p><b>Air battle</b></p>
+                        <p><b>Air base control</b>
+                        </p>
+                         <h4><b>Responsibilities:</b></h4>
+                        <ul>
+                        
+                        <li>Manage a small team with 13 members.</li>
+                        <li>R&D new technology in the field of game engine</li>
+                        
+                        </ul>
+                        <h4><b>Tech stack:</b></h4>
+                        <ul>
+                        
+                        <li>C++, C#, Android, iOs platform, cocos2dx, Unity3D</li>
+                         </ul>
+                </div>
+                <div class="Experiences_column">
+                            <h2><b>GEO SYSTEMS SOLUTION VIETNAM </b></h2>
+                        <h4>1/2020–3/2022</h4>
+                        <h3><b>TITLE:</b> R&D Technical Leader</h3>
+                        <p>(GEO corporation in Japan)</p>
+                        <h4><b>PROJECT LIST:</b></h4>
+                        <p><b>Project management system</b>
+                        is the system that helps GEO corporation to follow up the digital transformation strategy in management. The final product was deployed on AWS platform.
+                        <br>- Backend: developed with Express framework, Oracle/MySQL with Sequelize, Database hosted by AWS/RDS. APIs were developed and tested with the power from Mochai, Jest with the standard of the coverage - C2. In this projects, we have experienced in working with API from AWS (storage), Google (drive)
+                        <br>- Frontend: React-Js, Material-UI, Material-Table, BaseTable, Mock, Redux, are chosen to get the best quality of the final product.
+
+                        
+                        <h4><b>Responsibilities:</b></h4>
+                        <ul>
+                        
+                        <li>Participate in coding, and make design documents.</li>
+                        <li>Manage a small team with 10 members.</li>
+                        <li>Estimate time consuming, task delivery.</li>
+                        <li>Make documents for testing and QA. </li>
+                        <li>R&D new technology in the field of web development.</li>
+                        </ul>
+                        <h4><b>Tech stack:</b></h4>
+                        <ul>
+                        
+                        <li>Javascript, Typescript, Node.js, Express framework, React JS, AWS/RDS.</li>
+                        <li>Achievements:</li>
+                        <li>Knowledge of web app development. </li>
+                        <li>Requirement analysis and making design documents.</li>
+                        <li>Teamwork, Leadership, Management.</li>
+                        <li>Agile/scrum mindset, </li>
+                        </ul>
+                        </p>
+
+                        <h2><b>INDIE GAME DEVELOPER</b></h2>
+                        <h4>3/2018–1/2020</h4>
+                        <p>
+                        I had worked more with Javascript, to try something for a web-game. Technology stack includes NodeJs, 
+                        socketIO, MongoDB with Mongoose, ReactJs, … and more for html5 game engine such as PixiJs (2d), 
+                        ThreeJs(3D). 
+                        </p>
+
+                        <h4><b>PROJECT LIST:</b></h4>
+                        <p>
+                        <b>Graphic design tools:</b>
+                        This project is a personal project target to get something better in designing for non-professional users. 
+                        Technology stack in this projects includes:
+                        Backend ( nodejs/ typescript).
+                        Frontend (reactJS/ typescript, and ThreeJs, WebGL,).
+                        Database (mongoDB).
+                        Hosting (Aws).
+                        </p>
+                        <p>
+                        <b>OCG </b>(owned by NTT Japan) - gamepad.(outsourcing) , this system enables users to play games on smart television 
+                        and mobile devices, using a streaming server. We take part in client cluster with Swift 5 for ios app, 
+                        another part is back office, implemented by our company with NodeJs, on ExpressJs framework for backend,
+                         ReactJS for frontend, database MongoDB.
+                        </p>
+                        <p>
+                        <b>Poker King</b> (Freelance), an online gambling video game on smartphone, developed for Cambodian client, 
+                        with Cocos2dx, C++ for client, Java for server-side script. We implemented a socket app with RabbitMQ, 
+                        protobuf, redis, and mircro-service architect. Back Office system with Java Spring Boot, MySQL, 
+                        deployed on Google Cloud with AppEngine, Jetty server.
+                        </p>
+
+                        
+
+
+                        
+
+
+                        
+                </div>
+                <div class="Experiences_column">
+                            <h2><b>GAMELOFT</b></h2>
+                        <h4>3/2008–3/2010</h4>
+                        <h3><b>TITLE:</b> Mobile Game Developer.</h3>
+                        <p>Gameloft is No1 in gaming for mobile devices in the global market. 
+                            It has developed game for so many platforms such as BREW, J2ME, SYMBIAN, ANDROID, WINMOBILE, IPHONE,...
+                            that supported by most big telecom or mobile producer as NOKIA, SAMSUNG, LG, VERIZON, ATTEL, MOTOROLA,..
+                            As a mobile game developer in Gameloft, I have experienced through 6 projects since March, 2008. 
+                            </p>
+                        <h4><b>PROJECT LIST:</b></h4>
+                        <p>
+                         <ul>   
+                        <li> ASPHALT 4, 3D video game, BREW, SYMBIAN, WINMOBILE.</li>
+                        <li> CSI LAS VEGAS, for the South Korea market using BREW.</li>
+                        <li> SPIDERMAN, J2ME.</li>
+                        <li> MIDNIGHT BOWLING2, J2ME.</li>
+                        <li> COPS, ASSASSIN 2, Splinter Cell 5. BREW. </li>
+                        </ul>
+                        </p>
+                        <h4><b>Responsibilities:</b></h4>
+                          <ul> 
+                            <li>Participate in coding, and porting.</li>
+                            <li>Manage a small team with 3 members.</li>
+                            <li>Technologies used in project</li>
+                            <li>C++, C, BREW, SYMBIAN, WINMOBILE.</li>
+                            </ul>
+                        <h4><b>Achievements:</b></h4>
+                           <ul>
+                            <li>Knowledge C, C++, J2ME, BREW, SYMBIAN, WINMOBILE. </li>
+                            <li>Requirement analysis and collection skills.</li>
+                            <li>Teamwork</li>
+                            </ul>
+
+                        <h2><b>GMO RUNSYSTEM</b></h2>
+                        <h4>11/2010–7/2013</h4>
+                        <h3><b>TITLE:</b> Team Leader.</h3>
+                        
+                        <h4><b>PROJECT LIST:</b></h4>
+                        <p>
+                            <b>Social network system (SNS):</b> PHP using engine 4 framework(template).
+                             A SNS platform that supports users to communicate with some services 
+                             such as blog, photo, status sharing… and game playing.  
+                        </p>
+                        <p>
+                            <b>Match Pet:</b> a Puzzle & social game, android/ios platform, 
+                            japan market,  using cocos2dx, C++, ..  
+                        </p>
+                        <p>
+                            <b>CoinPanic:</b>j2me 3D, successfully converted 3D game physics engine to j2me from jiglib.
+                        </p>
+                        <p>
+                            <b>Ninja:</b>3D game, android platform, japan market.
+                        </p>
+                        <p>
+                            <b>Billard:</b>3D game,  android, jiglib engine.
+                        </p>
+                        
+                        <h4><b>Responsibilities:</b></h4>
+                          <ul> 
+                            <li>Participate in coding, and making design documents</li>
+                            <li>Manage a small team with 5 members.</li>
+                            <li>Technologies used in project</li>
+                            <li>C++, C, BREW, SYMBIAN, WINMOBILE.</li>
+                            </ul>
+                        <p>
+                        <h4><b>Tech stack:</b></h4>
+                         <ul>   
+                        <li> PHP, C++, Android Java, J3ME, cocos2dx.</li>
+                       
+                        </ul>
+                        </p>
+                        <h4><b>Achievements:</b></h4>
+                           <ul>
+                            <li>Knowledge of 3D physics engine, OOP. </li>
+                            <li>Requirement analysis and making design documents.</li>
+                            <li>Teamwork, Leadership, Management.</li>
+                            </ul>
+                        <h2><b>KAYAC HANOI </b></h2>
+                        <h4>7/2017–11/2017</h4>
+                        <h3><b>TITLE:</b> Technical Leader.</h3>
+                        <h4><b>PROJECT LIST:</b></h4>
+                        <p>ICHIMASTU (outsourcing)</p>
+                       
+                        
+
+                </div>
+            </div>
+            <div class="box"><p>************************************* </p></div>
+    </div>
+    <div class="main_page" id="Contact">
+        <div><h1>CONTACT</h1></div>
+            <div class="box">
+                <div class="education_pargraph">
+                    <div class="education_paragraph_box">
+                        <div class="imagesBox">
+                            <img src="/images/bangcao.png" class="imageItem">
+                        
+                        </div>
+                    </div>
+                    <div class="education_paragraph_box">
+                        <div class="education_paragraph_text">
+                        <h2>Bang Cao</h2>
+                        <p> Linkedin: https://linkedin.com/bangcao24</p>
+                        <p><i> Phone number: (+358)449503179</i></p>
+                        <p><i> Email: bang_caodinh@hotmail.com</i></p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="box"><p>************************************* </p></div>
+         
+    </div>
+    <div class="main_page" id="Blogs">
+         <div><h1>BLOGS</h1></div>
+         <div class="box"><p>************************************* </p></div>
+         <p>I will write the technical topics here...</p>
+         <div class="box"><p>************************************* </p></div>
+    </div>
+    
   </main>
   <footer>
 
@@ -271,21 +793,21 @@
         
         <div class="footer_bottom">
             <div class="footer_bottom_left footerBottomBox">
-                <nav>
-                <a href="#"> About</a>
-                <a href="#"> Advertising</a>
-                <a href="#"> Business</a>
-                <a href="#"> How Search works</a>
-                </nav>
+                <div class="footerBoxItem"><a href="#Contact">Contact</a></div>
+                <div class="footerBoxItem"><a href="#Blogs" > Blogs</a></div>    
+                <div class="footerBoxItem"><a href="#DevOp" > DevOp</a></div>
+                <div class="footerBoxItem"><a href="#Mobile" > Mobile</a></div>
+               
                 
             </div>
             <div class="footer_bottom_right footerBottomBox">
-               <nav>
-                <a href="#"> Privacy</a>
-                <a href="#"> Terms</a>
-                <a href="#"> Settings</a>
+               
                 
-                </nav>
+                <div class="footerBoxItem"><a href="#javascript" >  javascript</a></div>
+                <div class="footerBoxItem"><a href="#C#" >  C#</a></div>
+                <div class="footerBoxItem"><a href="#C++" >   C++</a></div>
+                
+               
             </div>
             
 
