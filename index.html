@@ -194,7 +194,7 @@
            
              border-top: #022A6A 3px solid;
         }
-        .headerBox:hover {
+         .headerBox:hover {
            
              border-bottom: #022A6A 3px solid;
         }
@@ -210,6 +210,7 @@
             height: 100%;
             margin-top: 0px;
             
+            /* background-color: white; */
             
         }
         #Projects{
@@ -222,7 +223,7 @@
             padding-top: 50px;
             
         }
-        /* Responsive layout - makes a one column-layout instead of two-column layout */
+                /* Responsive layout - makes a one column-layout instead of two-column layout */
         @media (max-width: 800px) {
             #Projects {
                 flex-direction: column;
@@ -247,7 +248,7 @@
         #Contact {
             
             width: 100%;
-            background-color: #ec03c9;
+            background-color: #D9EAD3;
         }
         #Blogs {
             height: 700px;
@@ -325,12 +326,28 @@
     <script>
 
        $(document).ready(function(){
-           
+            //$(".main_page").hide();
             $("#Projects").show();
             var selectedPage=null;
 
             $(".headerBox").click(function(){
+                /*
+                $(".main_page").hide();
                 
+                var option = $(this).text();
+                if(option == "Projects")
+                {
+                selectedPage = $("#Projects");
+                $("#Projects").show();
+                
+                }else if(option == "Educations")
+                {
+                
+                $("#Educations").show();
+                
+            
+                }
+                */
 
                 $(".headerBox").css("background-color", "white");
                 $(".headerBox").css("border-bottom", "0px solid #022A6A");
